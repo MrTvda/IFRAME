@@ -8,11 +8,8 @@ require("./models/User");
 require("./services/passport");
 
 mongoose
-  .connect(
-    keys.mongoURI,
-    { useNewUrlParser: true }
-  )
-  .then(() => console.log("MongoDB Connected"))
+  .connect(keys.mongoURI, { useNewUrlParser: true })
+  .then(() => console.log("MongoDB Connected the right way"))
   .catch(err => console.log(err));
 
 const app = express();
